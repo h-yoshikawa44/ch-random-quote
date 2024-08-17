@@ -18,6 +18,14 @@ pre-commit:
       stage_fixed: true
       skip:
         - merge
+    js-fixer:
+      glob: 'js/*.js'
+      run: |
+        npx eslint --fix --quiet {staged_files}
+        npx prettier --write --log-level=error {staged_files}
+      stage_fixed: true
+      skip:
+        - merge
     formatter:
       glob: '**/*.{json,yml}'
       run: npx prettier --write --log-level=error {staged_files}
