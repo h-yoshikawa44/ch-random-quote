@@ -1,7 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import eslintNPlugin from 'eslint-plugin-n';
-import eslintPromisePlugin from 'eslint-plugin-promise';
+import neostandard, { plugins } from 'neostandard';
 
 /** @type { import("eslint").Linter.Config[] } */
 export default [
@@ -9,8 +8,12 @@ export default [
     ignores: ['node_modules/**', 'eslint.config.js'],
   },
   js.configs.recommended,
-  eslintNPlugin.configs['flat/recommended-module'],
-  eslintPromisePlugin.configs['flat/recommended'],
+  ...neostandard(),
+  plugins['@stylistic'].configs.customize({
+    semi: true,
+  }),
+  plugins.n.configs['flat/recommended-module'],
+  plugins.promise.configs['flat/recommended'],
   {
     files: ['js/**/*.js'],
     languageOptions: {
