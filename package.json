@@ -11,7 +11,7 @@
     "lint:markuplint": "markuplint \"./**/*.html\"",
     "lint:stylelint": "stylelint \"./css/**/*.css\"",
     "lint:eslint": "eslint \"./js/**/*.js\"",
-    "check:prettier": "prettier --check \"./**/*.{html,css,json}\"",
+    "check:prettier": "prettier --check \"./**/*.{html,css,js,json,yml}\"",
     "fix": "npm run fix:markuplint && npm run fix:stylelint && npm run fix:eslint && npm run fix:prettier",
     "fix:markuplint": "npm run lint:markuplint -- --fix",
     "fix:stylelint": "npm run lint:stylelint -- --fix",
