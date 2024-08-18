@@ -14,6 +14,7 @@
   --author-text-color: var(--white);
   --tag-color: var(--dark-blue);
   --quote-text-color: var(--light-gray);
+  --action-buttons-border-color: var(--light-black);
   --icon-color: var(--gray);
 
   /* font */
@@ -29,4 +30,111 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
+}
+
+/* common
+-------------------- */
+
+.container {
+  max-width: 544px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* header
+-------------------- */
+
+/* ref: https://tailwindcss.com/docs/screen-readers */
+.header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* main
+-------------------- */
+
+.main {
+  padding-top: 240px;
+  padding-bottom: 260px;
+}
+
+.quote-card {
+  padding: 32px 4px 40px;
+  text-align: center;
+  background-color: var(--quote-background-color);
+  background-image: url('/images/bg-image-random-quote.svg');
+  background-position-x: right;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.quote-card__author {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--author-text-color);
+}
+
+.quote-card__tag-list {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.quote-card__tag {
+  padding: 4px 12px;
+  font-size: 0.625rem;
+  color: var(--tag-color);
+  border: 1px solid var(--tag-color);
+  border-radius: 24px;
+}
+
+.quote-card__quote {
+  margin-top: 28px;
+  font-size: 1.5rem;
+  color: var(--quote-text-color);
+}
+
+.action-buttons {
+  display: flex;
+  width: fit-content;
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid var(--action-buttons-border-color);
+  border-radius: 12px;
+}
+
+.action-buttons__button {
+  padding: 8px 12px;
+  color: var(--icon-color);
+  background-color: var(--background-color);
+  border-top: none;
+  border-right: 2px solid var(--action-buttons-border-color);
+  border-bottom: none;
+  border-left: none;
+}
+
+.action-buttons__button:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.action-buttons__button:last-child {
+  border-right: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.action-buttons__button-icon {
+  width: 32px;
+  height: 32px;
 }

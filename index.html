@@ -19,9 +19,43 @@
     />
   </head>
   <body>
-    <div id="app">
-      <h1>Vite App</h1>
-    </div>
+    <header class="header">
+      <h1>Random Quote</h1>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="quote-card">
+          <cite class="quote-card__author">George Bernard Show</cite>
+          <div class="quote-card__tag-list">
+            <span class="quote-card__tag">Famous Quotes</span>
+            <span class="quote-card__tag">Inspirational</span>
+          </div>
+          <blockquote class="quote-card__quote">
+            “Learn from yesterday, live for today, hope for tomorrow.”
+          </blockquote>
+        </div>
+        <div class="action-buttons">
+          <button class="action-buttons__button">
+            <img
+              class="action-buttons__button-icon"
+              src="/images/Regroup.svg"
+              alt="Regroup"
+              width="24"
+              height="24"
+            />
+          </button>
+          <button class="action-buttons__button">
+            <img
+              class="action-buttons__button-icon"
+              src="/images/link.svg"
+              alt="copy quote"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>
