@@ -25,27 +25,39 @@
     <main class="main">
       <div class="container">
         <div class="quote-card">
-          <cite class="quote-card__author">George Bernard Show</cite>
-          <div class="quote-card__tag-list">
-            <span class="quote-card__tag">Famous Quotes</span>
-            <span class="quote-card__tag">Inspirational</span>
+          <div id="quote-card-loading" class="quote-card--loading">
+            <p>Loading...</p>
           </div>
-          <blockquote class="quote-card__quote">
-            “Learn from yesterday, live for today, hope for tomorrow.”
-          </blockquote>
+          <div id="quote-card-content" class="hidden">
+            <cite id="author-name" class="quote-card__author">
+              George Bernard Show
+            </cite>
+            <div id="tag-list" class="quote-card__tag-list">
+              <span class="quote-card__tag">Famous Quotes</span>
+              <span class="quote-card__tag">Inspirational</span>
+            </div>
+            <blockquote id="quote-text" class="quote-card__quote">
+              “Learn from yesterday, live for today, hope for tomorrow.”
+            </blockquote>
+          </div>
         </div>
         <div class="action-buttons">
-          <button class="action-buttons__button">
+          <button
+            id="quote-change-button"
+            class="action-buttons__button"
+            title="Change Quote"
+          >
             <img
               class="action-buttons__button-icon"
               src="/images/Regroup.svg"
-              alt="Regroup"
+              alt="quote change"
               width="24"
               height="24"
             />
           </button>
-          <button class="action-buttons__button">
+          <button class="action-buttons__button" title="Copy Quote">
             <img
+              id="copy-button"
               class="action-buttons__button-icon"
               src="/images/link.svg"
               alt="copy quote"

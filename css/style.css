@@ -7,14 +7,17 @@
   --light-gray: #97a3b6;
   --white: #fff;
   --dark-blue: #6466e9;
+  --dark-blue-alpha: rgb(100 102 233 / 20%);
 
   /* color map */
   --background-color: var(--black);
   --quote-background-color: var(--light-black);
+  --loading-text-color: var(--light-gray);
   --author-text-color: var(--white);
   --tag-color: var(--dark-blue);
   --quote-text-color: var(--light-gray);
   --action-buttons-border-color: var(--light-black);
+  --action-button-active-color: var(--dark-blue);
   --icon-color: var(--gray);
 
   /* font */
@@ -39,6 +42,10 @@ body {
   max-width: 544px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 /* header
@@ -73,6 +80,12 @@ body {
   background-position-x: right;
   background-size: cover;
   border-radius: 16px;
+}
+
+.quote-card--loading {
+  font-size: 1rem;
+  color: var(--loading-text-color);
+  text-align: center;
 }
 
 .quote-card__author {
@@ -116,11 +129,18 @@ body {
 .action-buttons__button {
   padding: 8px 12px;
   color: var(--icon-color);
+  cursor: pointer;
   background-color: var(--background-color);
   border-top: none;
   border-right: 2px solid var(--action-buttons-border-color);
   border-bottom: none;
   border-left: none;
+  outline: none;
+}
+
+.action-buttons__button:hover,
+.action-buttons__button:focus {
+  background-color: var(--dark-blue-alpha);
 }
 
 .action-buttons__button:first-child {
