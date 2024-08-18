@@ -1,101 +1,140 @@
+/* root
+-------------------- */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  color: rgb(255 255 255 / 87%);
-  color-scheme: light dark;
-  background-color: #242424;
-  font-synthesis: none;
+  --black: #111729;
+  --light-black: #20293a;
+  --gray: #4a5567;
+  --light-gray: #97a3b6;
+  --white: #fff;
+  --dark-blue: #6466e9;
+
+  /* color map */
+  --background-color: var(--black);
+  --quote-background-color: var(--light-black);
+  --author-text-color: var(--white);
+  --tag-color: var(--dark-blue);
+  --quote-text-color: var(--light-gray);
+  --action-buttons-border-color: var(--light-black);
+  --icon-color: var(--gray);
+
+  /* font */
+  --font-base: 'Outfit', inter, system-ui, avenir, helvetica, arial, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-base);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* common
+-------------------- */
+
+.container {
+  max-width: 544px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-a:hover {
-  color: #535bf2;
+/* header
+-------------------- */
+
+/* ref: https://tailwindcss.com/docs/screen-readers */
+.header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
-body {
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
+/* main
+-------------------- */
+
+.main {
+  padding-top: 240px;
+  padding-bottom: 260px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  padding: 2rem;
-  margin: 0 auto;
+.quote-card {
+  padding: 32px 4px 40px;
   text-align: center;
+  background-color: var(--quote-background-color);
+  background-image: url('/images/bg-image-random-quote.svg');
+  background-position-x: right;
+  background-size: cover;
+  border-radius: 16px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: filter 300ms;
-  will-change: filter;
+.quote-card__author {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--author-text-color);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.quote-card__tag-list {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
 }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.quote-card__tag {
+  padding: 4px 12px;
+  font-size: 0.625rem;
+  color: var(--tag-color);
+  border: 1px solid var(--tag-color);
+  border-radius: 24px;
 }
 
-.card {
-  padding: 2em;
+.quote-card__quote {
+  margin-top: 28px;
+  font-size: 1.5rem;
+  color: var(--quote-text-color);
 }
 
-.read-the-docs {
-  color: #888;
+.action-buttons {
+  display: flex;
+  width: fit-content;
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid var(--action-buttons-border-color);
+  border-radius: 12px;
 }
 
-button {
-  padding: 0.6em 1.2em;
-  font-family: inherit;
-  font-size: 1em;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #1a1a1a;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: border-color 0.25s;
+.action-buttons__button {
+  padding: 8px 12px;
+  color: var(--icon-color);
+  background-color: var(--background-color);
+  border-top: none;
+  border-right: 2px solid var(--action-buttons-border-color);
+  border-bottom: none;
+  border-left: none;
 }
 
-button:hover {
-  border-color: #646cff;
+.action-buttons__button:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.action-buttons__button:last-child {
+  border-right: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #fff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+.action-buttons__button-icon {
+  width: 32px;
+  height: 32px;
 }
