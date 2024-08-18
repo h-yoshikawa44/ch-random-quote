@@ -17,11 +17,13 @@
     "fix:stylelint": "npm run lint:stylelint -- --fix",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run check:prettier -- --write",
+    "deploy": "npm run build && gh-pages -d dist",
     "prepare": "lefthook install || echo 'Can not set git hooks'"
   },
   "devDependencies": {
     "browserslist": "^4.23.3",
     "eslint": "^9.9.0",
+    "gh-pages": "^6.1.1",
     "lefthook": "^1.7.13",
     "lightningcss": "^1.26.0",
     "markuplint": "^4.9.2",
