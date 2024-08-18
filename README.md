@@ -8,14 +8,14 @@
 
 <div align="center">
   <h3>
-    <!-- <a href="https://h-yoshikawa44.github.io/ch-random-quote/">
+    <a href="https://h-yoshikawa44.github.io/ch-random-quote/">
       Demo
     </a>
-    <span> | </span> -->
-    <!-- <a href="">
+    <span> | </span>
+    <a href="https://devchallenges.io/solution/30462">
       Solution
     </a>
-    <span> | </span> -->
+    <span> | </span>
     <a href="https://devchallenges.io/challenge/random-quote">
       Challenge
     </a>
@@ -43,11 +43,11 @@
 
 ### Desktop
 
-（スクショを貼る）
+![overview - desktop](./screenshots/desktop.png)
 
 ### Mobile
 
-（スクショを貼る）
+<img src="./screenshots/mobile.png" alt="overview - mobile" width="50%">
 
 ### Built With
 
@@ -57,6 +57,7 @@ Base
 
 - [HTML](https://developer.mozilla.org/ja/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/ja/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/ja/docs/Web/JavaScript)
 - [Node.js](https://nodejs.org/)：20.16.0
 - [Vite](https://ja.vitejs.dev/)：5.4.1
 
@@ -64,21 +65,25 @@ Other major libraries
 
 - [Lightning CSS](https://lightningcss.dev/)
 
+API
+
+- [Quotable API](https://api.quotable.io/)
+
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenge/random-quote) was to build an application to complete the given user stories.
 
-- [ ] Create a random quote app that matches the given design.
-- [ ] Use HTML to create the basic structure.
-- [ ] Add author name, quote, tag,.. according to the design.
-- [ ] Use vanilla JavaScript to add interactivity.
-- [ ] Users can see a random quote when they first visit the page.
-- [ ] Users can see a random quote after they select the random button.
-- [ ] Users can copy the quote to the clipboard.
-- [ ] The page should be responsive on different screen sizes.
-- [ ] Deploy the solution and submit Repository URL and Demo URL.
+- [x] Create a random quote app that matches the given design.
+- [x] Use HTML to create the basic structure.
+- [x] Add author name, quote, tag,.. according to the design.
+- [x] Use vanilla JavaScript to add interactivity.
+- [x] Users can see a random quote when they first visit the page.
+- [x] Users can see a random quote after they select the random button.
+- [x] Users can copy the quote to the clipboard.
+- [x] The page should be responsive on different screen sizes.
+- [x] Deploy the solution and submit Repository URL and Demo URL.
 
 ## How To Use
 
@@ -101,13 +106,16 @@ npm run dev
 
 ## learned/improved
 
-（後で書く）
+- Review of how to use fetch api.
+- ESLint v9 (flat config) I understand a bit more about how to configure the base.
 
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-（後で書く）
+- [MDN - fetch API](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API)
+- [GitHub - neostandard/neostandard](https://github.com/neostandard/neostandard)
+- [ESLint Stylistic](https://eslint.style/)
 
 ## Contact
 
