@@ -22,5 +22,8 @@ export default [
         ...globals.browser,
       },
     },
+    rules: {
+      '@stylistic/brace-style': ['error', '1tbs'],
+    },
   },
 ];
