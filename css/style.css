@@ -12,6 +12,7 @@
   /* color map */
   --background-color: var(--black);
   --quote-background-color: var(--light-black);
+  --loading-text-color: var(--light-gray);
   --author-text-color: var(--white);
   --tag-color: var(--dark-blue);
   --quote-text-color: var(--light-gray);
@@ -41,6 +42,10 @@ body {
   max-width: 544px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 /* header
@@ -75,6 +80,12 @@ body {
   background-position-x: right;
   background-size: cover;
   border-radius: 16px;
+}
+
+.quote-card--loading {
+  font-size: 1rem;
+  color: var(--loading-text-color);
+  text-align: center;
 }
 
 .quote-card__author {

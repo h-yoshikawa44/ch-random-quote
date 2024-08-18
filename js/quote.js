@@ -1,5 +1,8 @@
 import { getRandomQuote } from './quoteApi.js';
 
+const quoteCardLoading = document.getElementById('quote-card-loading');
+const quoteCardContent = document.getElementById('quote-card-content');
+
 const authorName = document.getElementById('author-name');
 const tagList = document.getElementById('tag-list');
 const quoteText = document.getElementById('quote-text');
@@ -25,6 +28,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     quoteText.textContent = `“${quoteInfo.content}”`;
   };
 
-  setRandomQuote();
+  await setRandomQuote();
+  quoteCardContent.classList.remove('hidden');
+  quoteCardLoading.classList.add('hidden');
+
   quoteChangeButton.addEventListener('click', setRandomQuote);
 });

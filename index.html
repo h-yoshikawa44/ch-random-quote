@@ -25,15 +25,20 @@
     <main class="main">
       <div class="container">
         <div class="quote-card">
-          <cite id="author-name" class="quote-card__author"
-            >George Bernard Show</cite>
-          <div id="tag-list" class="quote-card__tag-list">
-            <span class="quote-card__tag">Famous Quotes</span>
-            <span class="quote-card__tag">Inspirational</span>
+          <div id="quote-card-loading" class="quote-card--loading">
+            <p>Loading...</p>
           </div>
-          <blockquote id="quote-text" class="quote-card__quote">
-            “Learn from yesterday, live for today, hope for tomorrow.”
-          </blockquote>
+          <div id="quote-card-content" class="hidden">
+            <cite id="author-name" class="quote-card__author"
+              >George Bernard Show</cite>
+            <div id="tag-list" class="quote-card__tag-list">
+              <span class="quote-card__tag">Famous Quotes</span>
+              <span class="quote-card__tag">Inspirational</span>
+            </div>
+            <blockquote id="quote-text" class="quote-card__quote">
+              “Learn from yesterday, live for today, hope for tomorrow.”
+            </blockquote>
+          </div>
         </div>
         <div class="action-buttons">
           <button
