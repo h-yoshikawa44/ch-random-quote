@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Random Quote</title>
+    <meta
+      name="description"
+      content="devChallenges.io - Random Quote | by h-yoshikawa44"
+    />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/ch-random-quote/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/ch-random-quote/assets/index-DPpbypHT.js"></script>
+    <link rel="stylesheet" crossorigin href="/ch-random-quote/assets/index-CqGzTeqO.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Random Quote</h1>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="quote-card">
+          <div id="quote-card-loading" class="quote-card--loading">
+            <p>Loading...</p>
+          </div>
+          <div id="quote-card-content" class="hidden">
+            <cite id="author-name" class="quote-card__author">
+              George Bernard Show
+            </cite>
+            <div id="tag-list" class="quote-card__tag-list">
+              <span class="quote-card__tag">Famous Quotes</span>
+              <span class="quote-card__tag">Inspirational</span>
+            </div>
+            <blockquote id="quote-text" class="quote-card__quote">
+              “Learn from yesterday, live for today, hope for tomorrow.”
+            </blockquote>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <button
+            id="quote-change-button"
+            class="action-buttons__button"
+            title="Change Quote"
+          >
+            <img
+              class="action-buttons__button-icon"
+              src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%2015.2L2.29289%2014.4929L1.58579%2015.2L2.29289%2015.9071L3%2015.2ZM9.8%2015.2L9.8%2016.2L9.8%2015.2ZM14.8%2011.2C14.8%2010.6477%2014.3523%2010.2%2013.8%2010.2C13.2477%2010.2%2012.8%2010.6477%2012.8%2011.2L14.8%2011.2ZM6.29289%2010.4929L2.29289%2014.4929L3.70711%2015.9071L7.70711%2011.9071L6.29289%2010.4929ZM2.29289%2015.9071L6.29289%2019.9071L7.70711%2018.4929L3.70711%2014.4929L2.29289%2015.9071ZM3%2016.2L9.8%2016.2L9.8%2014.2L3%2014.2L3%2016.2ZM9.8%2016.2C12.5614%2016.2%2014.8%2013.9614%2014.8%2011.2L12.8%2011.2C12.8%2012.8569%2011.4569%2014.2%209.8%2014.2L9.8%2016.2Z'%20fill='%234A5567'/%3e%3cpath%20d='M21.5%208.8L22.2071%209.50711L22.9142%208.80001L22.2071%208.0929L21.5%208.8ZM14.2%208.80001L14.2%209.80001L14.2%209.80001L14.2%208.80001ZM9.20001%2012.8C9.20001%2013.3523%209.64773%2013.8%2010.2%2013.8C10.7523%2013.8%2011.2%2013.3523%2011.2%2012.8L9.20001%2012.8ZM18.2071%2013.5071L22.2071%209.50711L20.7929%208.0929L16.7929%2012.0929L18.2071%2013.5071ZM22.2071%208.0929L18.2071%204.0929L16.7929%205.50711L20.7929%209.50711L22.2071%208.0929ZM21.5%207.8L14.2%207.80001L14.2%209.80001L21.5%209.8L21.5%207.8ZM14.2%207.80001C11.4386%207.80002%209.20001%2010.0386%209.20001%2012.8L11.2%2012.8C11.2%2011.1432%2012.5432%209.80002%2014.2%209.80001L14.2%207.80001Z'%20fill='%234A5567'/%3e%3c/svg%3e"
+              alt="quote change"
+              width="24"
+              height="24"
+            />
+          </button>
+          <button class="action-buttons__button" title="Copy Quote">
+            <img
+              id="copy-button"
+              class="action-buttons__button-icon"
+              src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10%2016H7C4.79086%2016%203%2014.2091%203%2012V12C3%209.79086%204.79086%208%207%208H10'%20stroke='%234A5567'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16%2012H8'%20stroke='%234A5567'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M14%2016H17C19.2091%2016%2021%2014.2091%2021%2012V12C21%209.79086%2019.2091%208%2017%208H14'%20stroke='%234A5567'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+              alt="copy quote"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
