@@ -39,9 +39,12 @@ body {
 -------------------- */
 
 .container {
-  max-width: 544px;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  padding: 0 4%;
+  margin: 0 auto;
 }
 
 .hidden {
@@ -73,6 +76,8 @@ body {
 }
 
 .quote-card {
+  width: 100%;
+  max-width: 544px;
   padding: 32px 4px 40px;
   text-align: center;
   background-color: var(--quote-background-color);
