@@ -82,8 +82,9 @@ body {
   text-align: center;
   background-color: var(--quote-background-color);
   background-image: url('/images/bg-image-random-quote.svg');
-  background-position-x: right;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
   border-radius: 16px;
 }
 
@@ -162,4 +163,10 @@ body {
 .action-buttons__button-icon {
   width: 32px;
   height: 32px;
+}
+
+@media (width > 640px) {
+  .quote-card {
+    background-size: auto;
+  }
 }
