@@ -29,10 +29,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-base);
+  background-color: var(--background-color);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
 }
 
 /* common
@@ -62,9 +62,9 @@ body {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+  clip-path: inset(50%);
 }
 
 /* main
@@ -136,12 +136,12 @@ body {
   padding: 8px 12px;
   color: var(--icon-color);
   cursor: pointer;
+  outline: none;
   background-color: var(--background-color);
   border-top: none;
   border-right: 2px solid var(--action-buttons-border-color);
   border-bottom: none;
   border-left: none;
-  outline: none;
 }
 
 .action-buttons__button:hover,
