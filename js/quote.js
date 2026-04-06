@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     tagList.innerHTML = '';
     tagList.append(...createTagElementList(quoteInfo.tags));
     // 疑似要素で前後に引用符をつけるとスペースが空くので、テキストに直接付与している
-    quoteText.textContent = `“${quoteInfo.content}”`;
+    quoteText.textContent = `“${quoteInfo.quote}”`;
   };
 
   await setRandomQuote();
