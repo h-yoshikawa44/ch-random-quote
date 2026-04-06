@@ -67,7 +67,7 @@ Other major libraries
 
 API
 
-- [Quotable API](https://api.quotable.io/)
+- [QuoteSlate API](https://quoteslate.vercel.app/)
 
 ## Features
 
